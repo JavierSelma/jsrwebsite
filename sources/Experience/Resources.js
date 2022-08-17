@@ -8,7 +8,7 @@ export default class Resources extends EventEmitter
     {
         super()
 
-        // Items (will contain every resources)
+        // Items (will contain every resource)
         this.items = {}
 
         // Loader

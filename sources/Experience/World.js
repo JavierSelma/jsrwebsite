@@ -1,5 +1,7 @@
 import * as THREE from 'three'
 import Experience from './Experience.js'
+import Arcade from "./Objects/Arcade";
+import {Color} from "three";
 
 export default class World
 {
@@ -15,19 +17,29 @@ export default class World
             if(_group.name === 'base')
             {
                 this.setDummy()
+                this.setArcade()
             }
         })
     }
 
     setDummy()
     {
-        this.resources.items.lennaTexture.encoding = THREE.sRGBEncoding
-        
+        //this.resources.items.lennaTexture.encoding = THREE.sRGBEncoding
+
+        const cubeColor = new THREE.Color(0xff7f24);
+
         const cube = new THREE.Mesh(
-            new THREE.BoxGeometry(1, 1, 1),
-            new THREE.MeshBasicMaterial({ map: this.resources.items.lennaTexture })
+            new THREE.BoxGeometry(12, 1.5, 12),
+            new THREE.MeshBasicMaterial({ color: cubeColor })
         )
-        this.scene.add(cube)        
+        this.scene.add(cube)
+
+
+    }
+
+    setArcade()
+    {
+        this.arcade = new Arcade()
     }
 
     resize()

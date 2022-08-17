@@ -4,7 +4,8 @@ export default [
         data: {},
         items:
         [
-            { name: 'lennaTexture', source: '/assets/lenna.png', type: 'texture' },
+            { name: 'arcadeMachine', source: '/assets/arcadeTJExport.glb', type: 'model' },
+            { name: 'arcadeMachineTexture', source: '/assets/arcadeTJExport.glb', type: 'texture' },
         ]
     }
 ]

@@ -57,6 +57,7 @@ export default class Experience
         this.config = {}
     
         // Debug
+        //this.config.debug = true
         this.config.debug = window.location.hash === '#debug'
 
         // Pixel ratio
