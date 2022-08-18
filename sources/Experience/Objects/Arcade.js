@@ -29,10 +29,6 @@ export default class Arcade
         this.model = this.resources.items.arcadeMachine
         console.log(this.model, "esto es el objeto")
         this.model.mesh = this.resources.items.arcadeMachine.scene
-        this.arcadeTexture = this.resources.items.arcadeMachineTexture
-        this.model.material = new THREE.MeshBasicMaterial( {
-            map: this.arcadeTexture
-        } );
 
         this.scene.add(this.model.mesh)
 
